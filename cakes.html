@@ -1,0 +1,393 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Delicious Cakes</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f7f7f7;
+        }
+
+        /* Header */
+        header {
+            background-color: #333;
+            color: white;
+            padding: 20px 0;
+        }
+
+        header .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 20px;
+        }
+
+        header .logo h1 {
+            margin: 0;
+        }
+
+        header nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+        }
+
+        header nav ul li {
+            margin-left: 20px;
+        }
+
+        header nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: url('taj.jpg') no-repeat center center/cover;
+            height: 500px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: white;
+        }
+
+        .hero h2 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+        }
+
+        .hero p {
+            font-size: 1.5rem;
+            margin-bottom: 20px;
+        }
+
+        .cta-btn {
+            background-color: #ff5722;
+            color: white;
+            padding: 15px 30px;
+            text-decoration: none;
+            font-size: 1.2rem;
+            border-radius: 5px;
+        
+        }
+
+        .cta-btn:hover {
+            background-color: #e64a19;
+        }
+
+        /* Cake Section */
+        .cakes-section {
+            padding: 50px 0;
+            background-color: #fff;
+        }
+
+        .cakes-section .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .cakes-section .section-title {
+            text-align: center;
+            font-size: 2.5rem;
+            font-weight: 600;
+            color: #333;
+            margin-bottom: 50px;
+        }
+
+        .cake-list {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+
+        .cake-item {
+            width: calc(33.333% - 20px);
+            margin-bottom: 30px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .cake-item:hover {
+            transform: scale(1.05);
+        }
+
+        .cake-item img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+        }
+
+        .cake-item h3 {
+            font-size: 1.8rem;
+            text-align: center;
+            color: #333;
+            margin: 20px 0;
+        }
+
+        .cake-item p {
+            text-align: center;
+            font-size: 1.2rem;
+            color: #666;
+            padding: 0 20px 20px;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #333;
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        footer p {
+            margin: 0;
+            font-size: 1rem;
+        }
+
+        /* Media Queries for Responsiveness */
+        @media (max-width: 768px) {
+            .cake-item {
+                width: calc(50% - 20px);
+            }
+
+            .hero h2 {
+                font-size: 2.5rem;
+            }
+
+            .hero p {
+                font-size: 1.2rem;
+            }
+
+            .cake-list {
+                justify-content: center;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .cake-item {
+                width: 100%;
+            }
+
+            .hero h2 {
+                font-size: 2rem;
+            }
+
+            .hero p {
+                font-size: 1rem;
+            }
+
+            .cake-item.cta-btn {
+                font-size: 1rem;
+                padding: 12px 25px;
+                align-items: center;
+            }
+        }
+/* Order Section */
+.order-section {
+    padding: 60px 0;
+    background-color: #ff6f61;
+    color: white;
+}
+
+.order-form {
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: white;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.order-form .form-group {
+    margin-bottom: 20px;
+}
+
+.order-form label {
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.order-form input,
+.order-form select,
+.order-form textarea {
+    width: 100%;
+    padding: 12px;
+    font-size: 16px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    margin-top: 8px;
+}
+
+.order-form button {
+    background-color: #ff6f61;
+    color: white;
+    padding: 15px 30px;
+    border: none;
+    font-size: 18px;
+    border-radius: 30px;
+    width: 100%;
+    cursor: pointer;
+}
+
+.order-form button:hover {
+    background-color: #e55b50;
+}
+.thank-you-message {
+    text-align: center;
+    background-color: #4CAF50;
+    padding: 30px;
+    border-radius: 10px;
+    color: white;
+}
+
+
+
+
+
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <div class="container">
+            <div class="logo">
+                <h1>Rehan Cakes</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="cakes.html">Cakes</a></li>
+                    <li><a href="cakes.html">Order</a></li>
+                    <li><a href="abut us.html">About us</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h2>Delicious Cakes Await</h2>
+            <p>Discover our wide selection of freshly baked cakes and place your order today!</p>
+            <a href="#cakes" class="cta-btn">Browse Cakes</a>
+        </div>
+    </section>
+
+    <section id="cakes" class="cakes-section">
+        <div class="container">
+            <h2 class="section-title">Our Cake Selection</h2>
+            <div class="cake-list">
+                <div class="cake-item">
+                    <img src="ch.jpg" alt="Chocolate Cake">
+                    <h3>Chocolate Cake</h3>
+                    <p>Rich, decadent, and indulgent. Perfect for chocolate lovers!</p>
+                    <a href="#order" class="cta-btn" onclick="toggleOrderForm()">Order Now</a>
+                </div>
+                <div class="cake-item">
+                    <img src="sl.jpg" alt="Vanilla Cake">
+                    <h3>Vanilla Cake</h3>
+                    <p>Light, fluffy, and classic. A sweet treat for any occasion.</p>
+                    <a href="#order" class="cta-btn" onclick="toggleOrderForm()">Order Now</a>
+                </div>
+                <div class="cake-item">
+                    <img src="stob.jpg" alt="Strawberry Cake">
+                    <h3>Strawberry Cake</h3>
+                    <p>Fresh and fruity with a delightful strawberry flavor.</p>
+                    <a href="#order" class="cta-btn" onclick="toggleOrderForm()">Order Now</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="order" class="order-section" style="display:none;">
+        <div class="container">
+            <h2 class="section-title">Place Your Order</h2>
+            <form id="orderForm" method="POST" class="order-form" onsubmit="submitOrder(event)">
+                <div class="form-group">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="cake">Choose Cake</label>
+                    <select id="cake" name="cake">
+                        <option value="chocolate">Chocolate Cake</option>
+                        <option value="vanilla">Vanilla Cake</option>
+                        <option value="strawberry">Strawberry Cake</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="quantity">Quantity</label>
+                    <input type="number" id="quantity" name="quantity" min="1" value="1" required>
+                </div>
+                <div class="form-group">
+                    <label for="address">Delivery Address</label>
+                    <textarea id="address" name="address" rows="4" required></textarea>
+                </div>
+                <button type="submit" class="cta-btn">Place Order</button>
+            </form>
+            <div id="thankYouMessage" class="thank-you-message" style="display:none;">
+                <h3>Thank You for Your Order!</h3>
+                <p>Your cake will be delivered to the provided address shortly. We appreciate your business!</p>
+            </div>
+        </div>
+    
+
+
+
+    <script>
+        // Function to toggle the order form visibility
+        function toggleOrderForm() {
+            const orderForm = document.getElementById("order");
+            if (orderForm.style.display === "none") {
+                orderForm.style.display = "block";
+            } else {
+                orderForm.style.display = "none";
+            }
+        }
+
+        // Function to handle the form submission
+        function submitOrder(event) {
+            event.preventDefault();  // Prevents the form from submitting normally
+            const orderForm = document.getElementById("orderForm");
+            const thankYouMessage = document.getElementById("thankYouMessage");
+
+            // Hide the order form
+            orderForm.style.display = "none";
+
+            // Show the thank you message
+            thankYouMessage.style.display = "block";
+        }
+    </script>
+
+
+
+
+
+
+
+
+
+    <footer id="contact">
+        <div class="container">
+            <p>&copy; 2025 Rehan Cakes. All rights reserved.</p>
+        </div>
+    </footer>
+
+</body>
+
+</html>

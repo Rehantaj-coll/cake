@@ -1,0 +1,199 @@
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Header */
+header {
+    background-color: #333;
+    padding: 20px 0;
+}
+
+header .logo h1 {
+    color: white;
+    font-size: 36px;
+}
+
+header nav ul {
+    display: flex;
+    justify-content: flex-end;
+    list-style-type: none;
+}
+
+header nav ul li {
+    margin-left: 30px;
+}
+
+header nav ul li a {
+    color: white;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+/* Hero Section */
+.hero {
+    background-image: url('taj.jpg');
+    background-size: cover;
+    background-position: center;
+    padding: 100px 0;
+    color: white;
+    text-align: center;
+}
+
+.hero h2 {
+    font-size: 48px;
+    font-weight: 700;
+}
+
+.hero p {
+    font-size: 20px;
+    margin: 20px 0;
+}
+
+.cta-btn {
+    background-color: #ff6f61;
+    padding: 10px 20px;
+    font-size: 18px;
+    font-weight: 600;
+    border-radius: 30px;
+    color: white;
+    transition: background-color 0.3s;
+}
+
+.cta-btn:hover {
+    background-color: #e55b50;
+}
+
+/* Cakes Section */
+.cakes-section {
+    padding: 60px 0;
+    background-color: #fff;
+}
+
+.cakes-section .section-title {
+    text-align: center;
+    font-size: 36px;
+    margin-bottom: 40px;
+    font-weight: 600;
+}
+
+.cake-list {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.cake-item {
+    text-align: center;
+    width: 30%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+}
+
+.cake-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.cake-item h3 {
+    margin: 20px 0 10px;
+    font-size: 24px;
+}
+
+.cake-item p {
+    font-size: 16px;
+    color: #777;
+}
+
+/* Order Section */
+.order-section {
+    padding: 60px 0;
+    background-color: #ff6f61;
+    color: white;
+}
+
+.order-form {
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: white;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.order-form .form-group {
+    margin-bottom: 20px;
+}
+
+.order-form label {
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.order-form input,
+.order-form select,
+.order-form textarea {
+    width: 100%;
+    padding: 12px;
+    font-size: 16px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    margin-top: 8px;
+}
+
+.order-form button {
+    background-color: #ff6f61;
+    color: white;
+    padding: 15px 30px;
+    border: none;
+    font-size: 18px;
+    border-radius: 30px;
+    width: 100%;
+    cursor: pointer;
+}
+
+.order-form button:hover {
+    background-color: #e55b50;
+}
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+footer p {
+    font-size: 14px;
+}
+.thank-you-message {
+    text-align: center;
+    background-color: #4CAF50;
+    padding: 30px;
+    border-radius: 10px;
+    color: white;
+}

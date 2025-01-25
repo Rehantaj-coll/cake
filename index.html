@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Delicious Cake Orders</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>
+        <div class="container">
+            <div class="logo">
+                <h1>Rehan Cakes</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="cakes.html">Cakes</a></li>
+                    <li><a href="cakes.html" onclick="toggleOrderForm()">Order</a></li>
+                    
+                    <li><a href="abut us.html">About us</a></li>
+
+
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h2>Your Perfect Cake, Just a Click Away</h2>
+            <p>Order your delicious, freshly baked cakes online with ease and have them delivered to your doorsteps!</p>
+            <a href="cakes.html" class="cta-btn" onclick="toggleOrderForm()">Order Now</a>
+        </div>
+    </section>
+
+    <section id="cakes" class="cakes-section">
+        <div class="container">
+            <h2 class="section-title">Our Cakes</h2>
+            <div class="cake-list">
+                <div class="cake-item">
+                    <img src="ch.jpg" alt="Chocolate Cake">
+                    <h3>Chocolate Cake</h3>
+                    <p>A rich and indulgent chocolate experience.</p>
+                </div>
+                <div class="cake-item">
+                    <img src="sl.jpg" alt="Vanilla Cake">
+                    <h3>Vanilla Cake</h3>
+                    <p>A light and fluffy vanilla cake.</p>
+                </div>
+                <div class="cake-item">
+                    <img src="stob.jpg" alt="Strawberry Cake">
+                    <h3>Strawberry Cake</h3>
+                    <p>Sweet and fruity strawberry-filled cake.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="order" class="order-section" style="display:none;">
+        <div class="container">
+            <h2 class="section-title">Place Your Order</h2>
+            <form id="orderForm" method="POST" class="order-form" onsubmit="submitOrder(event)">
+                <div class="form-group">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="cake">Choose Cake</label>
+                    <select id="cake" name="cake">
+                        <option value="chocolate">Chocolate Cake</option>
+                        <option value="vanilla">Vanilla Cake</option>
+                        <option value="strawberry">Strawberry Cake</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="quantity">Quantity</label>
+                    <input type="number" id="quantity" name="quantity" min="1" value="1" required>
+                </div>
+                <div class="form-group">
+                    <label for="address">Delivery Address</label>
+                    <textarea id="address" placeholder="Delivery Address" name="address" rows="4" required></textarea>
+                </div>
+                <button type="submit" class="cta-btn">Place Order</button>
+            </form>
+            <div id="thankYouMessage" class="thank-you-message" style="display:none;">
+                <h3>Thank You for Your Order!</h3>
+                <p>Your cake will be delivered to the provided address shortly. We appreciate your business!</p>
+            </div>
+        </div>
+    </section>
+
+    <footer id="contact">
+        <div class="container">
+            <p>&copy; 2025 Rehan Cakes. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Function to toggle the order form visibility
+        function toggleOrderForm() {
+            const orderForm = document.getElementById("order");
+            if (orderForm.style.display === "none") {
+                orderForm.style.display = "block";
+            } else {
+                orderForm.style.display = "none";
+            }
+        }
+
+        // Function to handle the form submission
+        function submitOrder(event) {
+            event.preventDefault();  // Prevents the form from submitting normally
+            const orderForm = document.getElementById("orderForm");
+            const thankYouMessage = document.getElementById("thankYouMessage");
+
+            // Hide the order form
+            orderForm.style.display = "none";
+
+            // Show the thank you message
+            thankYouMessage.style.display = "block";
+        }
+    </script>
+
+</body>
+
+</html>
